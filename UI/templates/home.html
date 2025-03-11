@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>MS SPAM DETECTOR</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h2 class='container-heading'><span>SPAM DETECTOR</span></h2>
+            
+            <!-- Navigation Bar -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/home">Features</a></li>
+                  
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Message Here... eg. Let's catch up tonight, You have a meeting scheduled for tomorrow, To join our premium memebership please enter code ALLYSON30 etc. "></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+         <!-- Footer -->
+         <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="#"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="#"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>© Python Team 2024</p>
+        </div>
+
+    </body>
+</html>
+
+
+
+<style>
+    body {
+        background-image: url('{{ url_for('static', filename='images/2.jpg') }}');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+</style>

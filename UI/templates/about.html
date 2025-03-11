@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>MS SPAM DETECTOR</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h2 class='container-heading'><span>SPAM DETECTOR</span></h2>
+            
+            <!-- Navigation Bar -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/home">Features</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+
+        <div class="text-area">
+            <h2>About Project</h2>
+            <p>
+                Incorporating evasive technique detection with NLP and Naive Bayes algorithms in SMS spam filtering has significant potential for real-time applications. One key advantage is 
+                <span class="highlight">dynamic spam detection and prevention</span>. By identifying evasive techniques, the model can quickly recognize new spam patterns, preventing unwanted messages from reaching users. 
+                Real-time filters based on Naive Bayes can be continuously updated with recent spam trends, allowing them to adapt swiftly to evolving tactics, thereby staying a step ahead of spammers.
+                This approach also enhances <span class="highlight">user experience and security</span>. Efficient spam detection keeps users' inboxes clean, providing a better overall experience. Additionally, reducing the number of phishing and malicious messages helps protect users from scams and potential data breaches—a critical feature in real-time communications.
+                Naive Bayes classifiers offer scalability and low-latency filtering capabilities, which are ideal for real-time applications where an immediate response is needed. This algorithm’s lightweight and fast nature allows it to process large volumes of messages with minimal delay, making it highly suitable for large-scale SMS services. Furthermore, the model's NLP-driven approach can adapt to new spam trends. By analyzing changing language patterns in spam messages, it can automatically identify shifts in spam techniques. Continuous training on incoming data enables the model to recognize and block newly emerging evasive tactics without requiring complex retraining.
+            </p>
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="#"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="#"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>© Python Team 2024</p>
+       </div>
+
+    </body>
+</html>
+
+
+
+<style>
+    body {
+        background-image: url('{{ url_for('static', filename='images/2.jpg') }}');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    .text-area {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    max-width: 800px;
+    text-align: justify;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-area p {
+    margin: 15px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #0066cc;
+}
+h2{
+    text-align: center;
+}
+</style>

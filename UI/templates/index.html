@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>MS SPAM DETECTOR</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body >
+        <div class="container">
+            <h2 class='container-heading'><span>SPAM DETECTOR</span></h2>
+            
+
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/home">Features</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+        <div class="heading-container">
+            <h2 class="myh2"><span>Investigating Evasive Techniques in</span></h2>
+            <h2 class="myh2"><span>SMS Spam Filtering:</span></h2>
+            <h2 class="myh2"><span>A Comparative Analysis of</span></h2>
+            <h2 class="myh2"><span>Machine Learning Models</span></h2>
+        </div>
+        
+        
+    </body>
+</html>
+
+<style>
+    body {
+        background-image: url('{{ url_for('static', filename='images/2.jpg') }}');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    .heading-container {
+    padding-top: 20px; 
+}
+
+.myh2 {
+    text-align: left;             
+    font-size: 30px;             
+    font-weight: bold;           
+    color: #232120;              
+    margin-top: 30px; 
+    margin-left: 100px;
+                 
+    padding-left: 10px;           
+    line-height: 1.2;             
+    border-left: 4px solid #333;  
+    opacity: 0;                   
+    transform: translateY(20px);  
+    animation: fadeInLine 1s ease forwards;
+}
+
+.myh2:nth-child(1) { animation-delay: 0.5s; }
+.myh2:nth-child(2) { animation-delay: 1.5s; }
+.myh2:nth-child(3) { animation-delay: 2.5s; }
+.myh2:nth-child(4) { animation-delay: 3.5s; }
+
+
+@keyframes fadeInLine {
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
